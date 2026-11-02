@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "docu-coach",
+  "version": "1.0.0",
+  "description": "Read Docu-Coach employee timelines, follow-ups, and coaching records. The connection is read-only.",
+  "author": {
+    "name": "Docu-Coach",
+    "url": "https://www.docu-coach.com"
+  },
+  "homepage": "https://www.docu-coach.com/docu-coach-mcp",
+  "repository": "https://github.com/travisrr/docu-coach-plugin",
+  "license": "MIT",
+  "keywords": ["coaching", "employee-records", "mcp"],
+  "skills": "./skills/",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Docu-Coach",
+        "shortDescription": "Read coaching records",
+        "longDescription": "Read employee timelines, follow-ups, and coaching records for the signed-in Docu-Coach member. The connector is read-only.",
+        "developerName": "Docu-Coach",
+        "category": "Productivity",
+        "capabilities": ["Read"],
+        "websiteURL": "https://www.docu-coach.com",
+        "privacyPolicyURL": "https://www.docu-coach.com/privacy-policy",
+        "termsOfServiceURL": "https://www.docu-coach.com/terms-and-conditions",
+        "defaultPrompt": [
+          "Show Maya Chen's timeline.",
+          "What follow-ups are still open?"
+        ],
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}
